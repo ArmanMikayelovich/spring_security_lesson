@@ -1,0 +1,41 @@
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 150MB
+  datasource:
+    username: user
+    password: root
+    url: jdbc:mysql://mysql-standalone2:3306/itpm?createDatabaseIfNotExist=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    properties:
+      hibernate:
+        cache:
+        region:
+        factory_class: org.hibernate.cache.ehcache.EhCacheRegionFactory
+        use_query_cache: true
+        use_second_level_cache: true
+        format_sql: true
+
+    hibernate:
+      ddl-auto: update
+
+    show-sql: true
+    open-in-view: false
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            clientId: bd5156ef5090613b6279
+            clientSecret: ef64d75bdf9262e3690f07a9e1f33d1ad09d9786
+          google:
+            client-id: 266993385066-ekla97k3gj56nlf5q4b8r04loa15e4io.apps.googleusercontent.com
+            client-secret: hoouT_GStlDN4bjs9IisBGtx
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: egsians
+    password: egsians9999
